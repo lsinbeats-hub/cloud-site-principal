@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Cloud Creative Studio - Soluções Digitais",
+  "description": "Agência especializada em soluções digitais para empresas: criação de sites, chatbots inteligentes, perfil no Google e artes para redes sociais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
