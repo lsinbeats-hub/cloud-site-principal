@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { AGENCY_CONFIG } from "../config/agency.ts";
 import { useSiteImages, SiteImages, DEFAULT_IMAGES } from "../context/ImageContext.tsx";
-import { Instagram, Heart, MessageCircle, ArrowUpRight, ExternalLink, X, ChevronLeft, ChevronRight, Upload, Camera } from "lucide-react";
+import { Instagram, Heart, MessageCircle, ArrowUpRight, ExternalLink, X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal.tsx";
 
 interface InstagramPost {
@@ -20,7 +20,6 @@ export const InstagramGallery: React.FC = () => {
   const [activeUploadKey, setActiveUploadKey] = useState<keyof SiteImages | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const fileBatchInputRef = useRef<HTMLInputElement>(null);
   const fileSingleInputRef = useRef<HTMLInputElement>(null);
 
   const posts: InstagramPost[] = [
@@ -214,26 +213,6 @@ export const InstagramGallery: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2.5 shrink-0 flex-wrap">
-              {/* Botão de substituição em lote */}
-              <button
-                type="button"
-                onClick={() => fileBatchInputRef.current?.click()}
-                className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-black uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
-                title="Substituir imagens da galeria com as suas fotos"
-              >
-                <Upload className="w-4 h-4" />
-                <span>Carregar Fotos da Galeria</span>
-              </button>
-
-              <input
-                ref={fileBatchInputRef}
-                type="file"
-                multiple
-                accept="image/*"
-                className="hidden"
-                onChange={handleBatchUpload}
-              />
-
               <input
                 ref={fileSingleInputRef}
                 type="file"

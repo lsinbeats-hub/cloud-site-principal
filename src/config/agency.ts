@@ -8,8 +8,8 @@ export const AGENCY_CONFIG = {
   tagline: "Soluções digitais para empresas: Sites, Chatbots, Google e Design",
   
   // WhatsApp oficial da agência
-  whatsappRaw: "5524999720701",
-  whatsappDisplay: "(24) 99972-0701",
+  whatsappRaw: "5524992408893",
+  whatsappDisplay: "(24) 99240-8893",
   
   // Instagram oficial
   instagramUsername: "sigacloudcreative",
